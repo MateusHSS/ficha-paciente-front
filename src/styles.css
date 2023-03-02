@@ -1,1 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body,
+app-root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.btn-large {
+  height: 50px;
+  width: 200px;
+}
+
+.btn-small {
+  height: 10px;
+  width: 40px;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-space-around {
+  justify-content: space-around;
+}
+
+.bg-brown {
+  background-color: #9e593f;
+}
+
+.bg-green {
+  background-color: #539e20;
+}
