@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="flex justify-space-around">
+    <button type="button" mat-raised-button color="accent" class="btn-large">
+      ESPECIALIDADES
+    </button>
+    <button type="button" mat-raised-button color="primary" class="btn-large">
+      PLANOS DE SAÚDE
+    </button>
+    <button type="button" mat-raised-button color="warn" class="btn-large">
+      NOVA FICHA
+    </button>
+  </div>
+  <app-tabela
+    [dataSource]="fichasPacientes"
+    [colunas]="colunas"
+    [addIcons]="true"
+    [exibirEditar]="true"
+    (edita)="editar($event)"
+    [exibirExcluir]="true"
+    (exclui)="excluir($event)"
+    [totalRegistros]="totalRegistros"
+  ></app-tabela>
+</div>
