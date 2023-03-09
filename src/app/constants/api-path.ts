@@ -16,9 +16,15 @@ export const api_path = {
     listar: {
       url: `${environment.backend_url}/especialidade`,
     },
+    getById: {
+      url: `${environment.backend_url}/especialidade`,
+    },
   },
   planosSaude: {
     listar: {
+      url: `${environment.backend_url}/plano-saude`,
+    },
+    getById: {
       url: `${environment.backend_url}/plano-saude`,
     },
   },

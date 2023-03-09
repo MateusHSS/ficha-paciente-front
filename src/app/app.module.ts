@@ -20,6 +20,14 @@ import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ListaEspecialidadesComponent } from './especialidades/lista-especialidades/lista-especialidades.component';
+import { EditaEspecialidadeComponent } from './especialidades/edita-especialidade/edita-especialidade.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ListaPlanosComponent } from './plano-saude/lista-planos/lista-planos.component';
+import { EditaPlanoComponent } from './plano-saude/edita-plano/edita-plano.component';
+import { CriaPlanoComponent } from './plano-saude/cria-plano/cria-plano.component';
+import { CriaEspecialidadeComponent } from './especialidades/cria-especialidade/cria-especialidade.component';
+import { CriaFichaComponent } from './fichas-paciente/cria-ficha/cria-ficha.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +37,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     ListaFichasComponent,
     EditaFichaComponent,
     TabelaComponent,
+    ListaEspecialidadesComponent,
+    EditaEspecialidadeComponent,
+    ListaPlanosComponent,
+    EditaPlanoComponent,
+    CriaPlanoComponent,
+    CriaEspecialidadeComponent,
+    CriaFichaComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,6 +60,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormsModule,
     MatButtonModule,
     ReactiveFormsModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
