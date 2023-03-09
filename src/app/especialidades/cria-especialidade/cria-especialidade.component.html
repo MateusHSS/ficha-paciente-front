@@ -1,0 +1,16 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="container center">
+    <h1>Nova especialidade</h1>
+  </div>
+  <div class="container center">
+    <mat-form-field class="w-60">
+      <mat-label>Nome da especialidade</mat-label>
+      <input matInput [formControl]="especialidade" />
+    </mat-form-field>
+  </div>
+  <div class="container center">
+    <button type="submit" mat-raised-button color="primary" class="btn-large">
+      SALVAR
+    </button>
+  </div>
+</form>
