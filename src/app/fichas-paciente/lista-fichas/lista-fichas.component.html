@@ -1,12 +1,30 @@
 <div class="container">
   <div class="flex justify-space-around">
-    <button type="button" mat-raised-button color="accent" class="btn-large">
+    <button
+      type="button"
+      mat-raised-button
+      color="accent"
+      class="btn-large"
+      (click)="listarEspecialidades()"
+    >
       ESPECIALIDADES
     </button>
-    <button type="button" mat-raised-button color="primary" class="btn-large">
+    <button
+      type="button"
+      mat-raised-button
+      color="primary"
+      class="btn-large"
+      (click)="listarPlanosSaude()"
+    >
       PLANOS DE SAÚDE
     </button>
-    <button type="button" mat-raised-button color="warn" class="btn-large">
+    <button
+      type="button"
+      mat-raised-button
+      color="warn"
+      class="btn-large"
+      (click)="novaFicha()"
+    >
       NOVA FICHA
     </button>
   </div>
