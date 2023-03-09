@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { EspecialidadesService } from 'src/app/services/especialidades.service';
 import { FichasPacienteService } from 'src/app/services/fichas-paciente.service';
-import { PlanosSaudeService } from 'src/app/services/planosSaude.service';
+import { PlanosSaudeService } from 'src/app/services/planos-saude.service';
 import { Validators } from '@angular/forms';
+import { SnackBarService } from 'src/app/services/snackBar.service';
 
 interface FichaPaciente {
   nomePaciente: string;
@@ -33,7 +34,12 @@ interface PlanoSaude {
   selector: 'app-edita-ficha',
   templateUrl: './edita-ficha.component.html',
   styleUrls: ['./edita-ficha.component.css'],
-  providers: [FichasPacienteService, EspecialidadesService, PlanosSaudeService],
+  providers: [
+    FichasPacienteService,
+    EspecialidadesService,
+    PlanosSaudeService,
+    SnackBarService,
+  ],
 })
 export class EditaFichaComponent {
   idEspecialidade: string = '';
@@ -61,7 +67,9 @@ export class EditaFichaComponent {
     private route: ActivatedRoute,
     private fichasPacienteService: FichasPacienteService,
     private especialidadesService: EspecialidadesService,
-    private planosSaudeService: PlanosSaudeService
+    private planosSaudeService: PlanosSaudeService,
+    private _snackBar: SnackBarService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -105,7 +113,8 @@ export class EditaFichaComponent {
           { nomePaciente: this.fichaPaciente.value.nomePaciente }
         )
         .subscribe((data) => {
-          console.log(data);
+          this._snackBar.openSnackBar('Ficha editada com sucesso');
+          this.router.navigate(['']);
         });
     } else {
       alert('Burro');
