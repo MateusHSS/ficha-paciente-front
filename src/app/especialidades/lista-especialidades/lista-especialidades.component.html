@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="center">
+    <h1>Especialidades</h1>
+  </div>
+  <div class="center">
+    <button
+      type="button"
+      mat-raised-button
+      color="accent"
+      class="btn-large"
+      (click)="criarEspecialidade()"
+    >
+      NOVA ESPECIALIDADE
+    </button>
+  </div>
+  <div class="center">
+    <div class="w-60">
+      <app-tabela
+        [dataSource]="especialidades"
+        [colunas]="colunas"
+        [addIcons]="true"
+        [exibirEditar]="true"
+        (edita)="editar($event)"
+        [exibirExcluir]="true"
+        (exclui)="excluir($event)"
+        [totalRegistros]="totalRegistros"
+      ></app-tabela>
+    </div>
+  </div>
+</div>
