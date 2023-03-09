@@ -1,4 +1,11 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  Output,
+  ViewChild,
+} from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
 import { Observable, of } from 'rxjs';
 
 @Component({
@@ -17,7 +24,9 @@ export class TabelaComponent {
   @Output() edita: EventEmitter<any> = new EventEmitter();
   @Output() exclui: EventEmitter<any> = new EventEmitter();
 
-  onClickEdit(item: any) {
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  onClickEdit(item: any): void {
     this.edita.emit(item);
   }
 
